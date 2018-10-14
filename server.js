@@ -44,6 +44,12 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  app.render('projects.hbs', {
+    pageTitle: 'Portfolio',
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     error: 'some error occured',
